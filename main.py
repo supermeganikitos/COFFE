@@ -113,7 +113,7 @@ g1 = '''<?xml version="1.0" encoding="UTF-8"?>
      </rect>
     </property>
     <property name="text">
-     <string>Название</string>
+     <string>Сорт</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
@@ -126,7 +126,7 @@ g1 = '''<?xml version="1.0" encoding="UTF-8"?>
      </rect>
     </property>
     <property name="text">
-     <string>Год выпуска</string>
+     <string>Цена(руб)</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_3">
@@ -139,7 +139,7 @@ g1 = '''<?xml version="1.0" encoding="UTF-8"?>
      </rect>
     </property>
     <property name="text">
-     <string>Жанр</string>
+     <string>Молотое(0)\В зернах(1)</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_4">
@@ -152,7 +152,7 @@ g1 = '''<?xml version="1.0" encoding="UTF-8"?>
      </rect>
     </property>
     <property name="text">
-     <string>Длина</string>
+     <string>В пачке(кг)</string>
     </property>
    </widget>
    <widget class="QPlainTextEdit" name="title">
@@ -203,7 +203,7 @@ g1 = '''<?xml version="1.0" encoding="UTF-8"?>
  </widget>
  <resources/>
  <connections/>
-</ui>'''
+</ui>>'''
 
 
 class AddFilmWidget(QMainWindow):
