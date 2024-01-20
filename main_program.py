@@ -3,11 +3,14 @@ import sys
 from PyQt5 import uic
 from PyQt5.QtWidgets import QApplication, QTableWidgetItem, QMessageBox
 from PyQt5.QtWidgets import QMainWindow
+import main
+import addEditCoffeeForm
 
 
-class AddFilmWidget(QMainWindow):
+class AddFilmWidget(QMainWindow, addEditCoffeeForm.Ui_MainWindow):
     def __init__(self, parent=None, idd=None, add_or_edit=True):
-        super().__init__(parent)
+        QMainWindow.__init__(parent)
+        self.setupUi(self)
         uic.loadUi('addEditCoffeeForm.ui', self)
         self.con = sqlite3.connect('coffee.sqlite3')
         cur = self.con.cursor()
@@ -91,10 +94,10 @@ class AddFilmWidget(QMainWindow):
                 return True
 
 
-class MyWidget(QMainWindow):
+class MyWidget(QMainWindow, main.Ui_MainWindow):
     def __init__(self, ):
-        super().__init__()
-        uic.loadUi('main.ui', self)
+        QMainWindow.__init__(self)
+        self.setupUi(self)
         self.result = None
         self.selected_f_ids = []
         self.selected_g_ids = []
